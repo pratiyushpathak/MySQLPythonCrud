@@ -1,4 +1,4 @@
-from MySql.MysqlCRUD.Config.ConnectDB import ConnectDB
+from MySql.MysqlCRUD.Config.ConnectDB import connectDB
 from MySql.MysqlCRUD.Controller.CardController import CardController
 class AuthController:
 
@@ -7,7 +7,7 @@ class AuthController:
         while True:
             print('Your Email is: ', email)
             password = input("Enter Your Password: ")
-            connection = ConnectDB.connectDB()
+            connection = connectDB()
             cursor = connection.cursor()
 
             cursor.execute("SELECT firstName,password,cardType FROM Customers WHERE c_id=%s", (id,))

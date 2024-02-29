@@ -1,4 +1,4 @@
-from MySql.MysqlCRUD.Config.ConnectDB import ConnectDB
+from MySql.MysqlCRUD.Config.ConnectDB import connectDB
 from MySql.MysqlCRUD.Controller.FunctionController import FunctionController
 class CardController:
 
@@ -27,7 +27,7 @@ class CardController:
                 case 3:
                     functions.deposit(id)
                 case 4:
-                    functions.increaseLimit(id,num)
+                    functions.increaselimit(id,num)
                 case 5:
                     flag = True
                 case _:
